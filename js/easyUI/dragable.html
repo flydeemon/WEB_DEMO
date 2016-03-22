@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>拖动</title>
+		<link rel="stylesheet" type="text/css" href="easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="icon.css"/>
+		<style type="text/css">
+			.item{background: lightsalmon;}
+			.left{
+				float: left;
+				top: 10px;
+				left: 10px;
+			}
+			.right{
+				float: left;
+				top: 10px;
+				margin-left: 200px;
+			}
+			
+		</style>
+		<script src="../jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.item').draggable();
+			})
+		</script>
+	</head>
+	<body>
+		<div class="left">
+			<table cellspacing="2px" cellpadding="2px">
+				<tr><td><div class="item">英语</div></td></tr>
+				<tr><td><div class="item">数学</div></td></tr>
+				<tr><td><div class="item">语文</div></td></tr>
+			</table>
+		</div>
+		
+		<div class="right">
+			<table border="1px" cellspacing="1px" cellpadding="1px">
+				<tr class="tabs-title">
+					<td><div class="drop">星期一</div></td>
+					<td><div class="drop">星期二</div></td>
+					<td><div class="drop">星期三</div></td>
+					<td><div class="drop">星期四</div></td>
+					<td><div class="drop">星期五</div></td>
+				</tr>
+				
+				<tr>
+					<td><div class="drop"></div></td>
+					<td><div class="drop"></div></td>
+					<td><div class="drop"></div></td>
+					<td><div class="drop"></div></td>
+					<td><div class="drop"></div></td>
+				</tr>
+				
+			</table>
+		</div>
+		
+	</body>
+</html>
