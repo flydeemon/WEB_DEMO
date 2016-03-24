@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>pagination</title>
+
+		<link rel="stylesheet" type="text/css" href="../easyui.css" />
+		<link rel="stylesheet" type="text/css" href="../icon.css" />
+
+		<script src="../jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$(function(){
+				//面板
+				$('#connect').panel({
+					width: 300,
+					height: 200,
+					//href:'show_content.php?page=1'
+				});
+				
+				//分页
+				$('#pagination').pagination({
+					total: 50,
+					pageSize: 10,
+					pageNumber: 2,
+					loading: false,
+					buttons:[{
+						iconCls: 'icon-add',
+						handle: function(){alert('add');}
+					},'-',{
+						iconCls: 'icon-save',
+						handle: function(){alert('save');}
+					}],
+				});
+			});
+			
+			
+		</script>
+
+	</head>
+
+	<body>
+		<!--从标签中创建-->
+		<!--<div id="connect" class="easyui-panel" data-options="width:300" style="height: 200px;"></div>
+		<div class="easyui-pagination" data-options="total:50,pageSize:10"></div>-->
+
+		<div id="connect" class="easyui-panel"></div>
+		<div id="pagination" class="easyui-pagination"></div>
+	</body>
+
+</html>
