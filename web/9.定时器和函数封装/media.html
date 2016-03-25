@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		window.onload = function(){
+			var result = window.matchMedia("(min-width:600px)");
+			document.write(result);
+			result.addListener(sizeChange);
+			
+			function sizeChange(result){
+				
+				var v = document.getElementById("myDiv");
+				if(result.matches){
+					document.write("getting big"+"<br/>"+result.media);
+				}else{
+					document.write("getting small"+"<br/>"+ result.media);
+				}
+			}
+		};
+		</script>
+	</head>
+	<body>
+		<div id="myDiv"></div>
+	</body>
+</html>
