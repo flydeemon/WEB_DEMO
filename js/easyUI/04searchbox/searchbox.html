@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>searchbox</title>
+		<link rel="stylesheet" type="text/css" href="../icon.css"/>
+		<link rel="stylesheet" type="text/css" href="../easyui.css"/>
+		<script src="../jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			function srch(value, name){
+				alert(value + ':' + name);
+			}
+		</script>
+		
+		<script type="text/javascript">
+			$(function(){
+				$('#searchbox').searchbox({
+					width: 'auto',
+					prompt: 'Hello',
+					menu: '#menu',
+					searcher: function(value, name){
+						alert(value + ":" + name);
+					},
+					
+				});
+				
+			});
+		</script>
+		
+	</head>
+	<body>
+		<!--从标签中创建-->
+		<input id="ss" class="easyui-searchbox" style="width: 300px;" data-options="searcher:srch,prompt:'please input',menu:'#mm'" />
+		<div id="mm" style="width: 120px">
+			<div data-options="name:'all',iconCls:'icon-ok'">All</div>
+			<div data-options="name:'sports'">Sports</div>
+		</div>
+		
+		<!--从js中创建-->
+		<input id="searchbox" />
+		<div id="menu" style="width: 120px">
+			<div data-options="name:'all',iconCls:'icon-ok'">All</div>
+			<div data-options="name:'sports'">Sports</div>
+		</div>
+	</body>
+</html>

@@ -2,10 +2,11 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>拖动</title>
+		<title>draggable</title>
 		<style type="text/css">
 			.item{background: lightsalmon;}
 			.left{
+				
 				float: left;
 				top: 10px;
 				left: 10px;
@@ -28,6 +29,7 @@
 				
 				$('.right .drop').droppable({
 					onDrop: function(e, source){
+						
 						var c = $(source).clone();
 						$(this).append(c);
 						//设置拖动后还能继续拖动
