@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>fade</title>
+		<style type="text/css">
+			div{width: 200px;height: 200px;}
+		</style>
+		
+		<script src="jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#btnIn').click(function(){
+					$("#1").fadeIn(1000);
+					$("#2").fadeIn(1500);
+					$("#3").fadeIn(2000);
+				});
+				$('#btnOut').click(function(){
+					$("#1").fadeOut(2000);
+					$("#2").fadeOut(1500);
+					$("#3").fadeOut(1000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btnIn">淡入</button>
+		<button id="btnOut">淡出</button>
+		<div id="1" style="background: lightcoral;display: none;"></div>
+		<div id="2" style="background: lightskyblue;display: none;"></div>
+		<div id="3" style="background: lightseagreen;display: none;"></div>
+	</body>
+</html>

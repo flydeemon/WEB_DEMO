@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>slide</title>
+		<style type="text/css">
+			div{
+				width: 200px;height: 200px;
+				background: lightpink;
+				text-align: center;
+				line-height: 200px;
+			}
+			#content{
+				background: lightsalmon;
+				display: none;
+				}
+			
+		</style>
+		
+		<script src="jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#title').click(function(){
+					$('#content').slideToggle('slow');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="title">title</div>
+		<div id="content">滑动内容</div>
+	</body>
+</html>
