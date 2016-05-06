@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>layout</title>
+		<link rel="stylesheet" type="text/css" href="../easyui.css" />
+		<link rel="stylesheet" type="text/css" href="../icon.css" />
+	
+		<script src="../jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#layout').layout();
+				$('#layout').layout('collapse', 'west');
+			});
+		</script>
+	</head>
+	<body id="layout" class="easyui-layout">
+		<div data-options="region:'west',split:true" style="width: 200px;height: 100px;"></div>
+		<div data-options="region:'east',split:true,collapsed:true" style="width: 200px;height: 100px;">asdfasdf</div>
+		<div data-options="region:'north',split:true" style="width: 100px;height: 200px;"></div>
+		<div data-options="region:'south',split:true" style="width: 100px;height: 200px;"></div>
+		<div data-options="region:'center',split:false" style="background: lightcoral;"></div>
+	</body>
+</html>
