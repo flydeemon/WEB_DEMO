@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function stringToHex(str) {　　　　
+				var val = "";　　　　
+				for (var i = 0; i < str.length; i++) {　　　　　　
+					if (val == "")
+						val = str.charCodeAt(i).toString(2);　　　　　　
+					else
+						val += "," + str.charCodeAt(i).toString(2);　　　　
+				}　　　　
+				return val;　　
+			}
+			var str = 1;　　
+			document.write(stringToHex(str));
+		</script>
+	</head>
+
+	<body>
+		<button id="btn1">点我啊1</button>
+		<button id="btn2">点我啊2</button>
+	</body>
+
+</html>
