@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ngdemo1</title>
+	</head>
+
+	<body>
+		<div ng-controller="myCtlr">
+			<input type="text" ng-model="name" />
+			<p>{{name}}</p>
+			<ul ng-repeat="d in data">
+				<li>{{d.job}}</li>
+				<li>{{d.level}}</li>
+			</ul>
+		</div>
+
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/module.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
