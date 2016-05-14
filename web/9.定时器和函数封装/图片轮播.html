@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>图片轮播</title>
+	</head>
+
+	<body>
+	</body>
+	<script src="jQuery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script type="text/javascript">
+		var name = "The Window";　　
+		var object = {　　　　
+			name: "My Object",
+			getNameFunc: function() {　　　　　　
+				return function() {　　　　　　　　
+					return this.name;　　　　　　
+				};　　　　
+			}　　
+		};
+		var a = object.getNameFunc()();
+		alert(a);
+		//第一个问题，object.getnameFunc()()函数在执行时this属于全局域，因此结果是the window
+	</script>-->
+	<script type="text/javascript">
+		var name = "The Window";　　
+		var object = {　　　　
+			name: "My Object",
+			getNameFunc: function() {　　　　　　
+				var that = this;　　　　　　
+				return function() {　　　　　　　　
+					return that.name;　　　　　　
+				};　　　　
+			}　　
+		};　　
+		alert(object.getNameFunc()());
+		//第二个问题，通过使用that=this 保留了在调用object.getnameFunc()时的this状态值。因此在getnameFunc()的闭包中访问的变量是已经不是this的了，而是that的～
+	</script>
+
+</html>

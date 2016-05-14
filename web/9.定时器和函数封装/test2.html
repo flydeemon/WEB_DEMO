@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="a" onclick="test(this)" style="background:lavender;width: 200px;height: 200px;">
+			1
+		</div>
+	</body>
+	<script src="jQuery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function test(object){
+			console.log($(object));
+			if($(object).hasClass('a')){
+				$(object).addClass('b').removeClass('a');
+			}else{
+				$(object).addClass('a').removeClass('b');
+			}
+			
+			return a==1?'a':'b';
+		}
+	</script>
+</html>
