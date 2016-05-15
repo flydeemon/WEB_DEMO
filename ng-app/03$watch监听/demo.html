@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>demo</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="module.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div ng-controller="iphone">
+			<input type="text" ng-model="iphone.price" placeholder="价格" />
+			<input type="text" ng-model="iphone.number" placeholder="数量" />
+			<p>运费：{{iphone.fre}}</p>
+			<!--使用过滤器 | 过滤器:[参数]-->
+			<p>费用：{{sum() | currency:'￥'}}</p>
+			<p>合计：{{sum()+iphone.fre | currency:'￥'}}</p>
+		</div>
+	</body>
+
+</html>

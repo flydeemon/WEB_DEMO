@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>表格例子</title>
+		<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	</head>
+
+	<body class="container">
+		<div class="row" ng-controller="myCtrl">
+			<form class="form-inline">
+				<div class="form-group">
+				    <label for="text">搜索框：</label>
+				    <input type="text" class="form-control" id="text" placeholder="关键字" ng-model="search">
+				</div>
+				<input type="button" class="btn btn-primary" value="搜索" ng-click="fnSearch()" />
+			</form>
+			
+			<table class="table table-responsive table-striped">
+				<tr>
+					<td ng-click="fnSort('color')">Color</td><td ng-click="fnSort('num')">Number</td>
+				</tr>
+				<tr ng-repeat="data in datas">
+					<td>{{data.color}}</td><td>{{data.num}}</td>
+				</tr>
+			</table>
+		</div>
+		
+	</body>
+	<script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdn.bootcss.com/angular.js/1.5.5/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="module.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

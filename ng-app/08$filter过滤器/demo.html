@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>demo</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="module.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<p>{{name}}</p>
+		<!--自定义filter-->
+		<p>{{test | fristUpper : 1}}</p>
+	</body>
+
+</html>

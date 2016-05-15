@@ -1,6 +1,7 @@
 /*
  * angular demo
  */
+
 var myModule = angular.module('myModule', []);
 
 myModule.controller('myCtlr', function($scope) {
