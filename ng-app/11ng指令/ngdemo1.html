@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ngdemo1</title>
+	</head>
+
+	<body>
+		<div ng-controller="myCtlr">
+			<!-- ng-disabled 禁用指令 -->
+			<input type="button" value="{{value}}" ng-disabled="isable" />
+			<!-- ng-readonly 只读指令 -->
+			<input type="text" value="5秒后能编辑" ng-readonly="isable" />
+			<!-- ng-checked 选中指令 -->
+			<input type="checkbox" ng-checked="isable" />
+			<!-- 
+				ng-value 当angular未加载完成时不会显示{{}}
+				提升用户体验
+			-->
+			<input type="text" ng-value="value" />
+		</div>
+
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="module.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
