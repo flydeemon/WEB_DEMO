@@ -15,11 +15,13 @@
 		<script src="doMove.js"></script>
 		<script type="text/javascript">
 			window.onload = function() {
-				var str = '';
+				//用于缓存dom操作
+				var str = '';	
 				
 				for (var i = 0; i < 20; i++) {
 					str += '<div style="top:0px;left:' + i * 60 + 'px;"></div>';
 				}
+				
 				//加载Div
 				document.body.innerHTML = str;
 				
@@ -31,31 +33,35 @@
 				
 				document.onclick = function() {
 					clearInterval(timer);
-					if(open){
+					
+					if(open){		//落下的操作
 						open = false;
 						timer = setInterval(function() {
 							doMove(oDiv[num], 'top', 10, 500);
 							num++;
+							
 							if (num == len){
 								clearInterval(timer);	
 								num = len - 1;	//记得数组的最大值
 							}
+							
 						}, 100);		
-					}else{
+					}else{			//上升的操作
 						open = true;
 						timer = setInterval(function() {
-							//alert(num)
 							doMove(oDiv[num], 'top', -10, 0);
 							num--;
+							
 							if (num < 0){
 								clearInterval(timer);
 								num = 0;
 							}
+							
 						}, 100);
-					}
+					}//else end
 					
-				};
-			};
+				}; //document.onclick end
+			}; //window.onload end
 		</script>
 	</head>
 
