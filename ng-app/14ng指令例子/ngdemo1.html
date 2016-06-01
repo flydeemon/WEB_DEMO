@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ngdemo1</title>
+		<style type="text/css">
+			#div1 div,#div2 div {
+				width: 100px;
+				height: 100px;
+				border: 1px solid lightcoral;
+				display: none;
+			}
+			#div1 .active,#div2 .active{
+				background: lightcoral;
+				border: 1px solid lightcoral;
+			}
+		</style>
+	</head>
+
+	<body ng-controller="myCtrl">
+		<mytab my-id="div1" my-data="data1"></mytab>
+		<mytab my-id="div2" my-data="data2"></mytab>
+	</body>
+	<script src="../angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="module.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
