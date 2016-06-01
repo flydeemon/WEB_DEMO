@@ -18,6 +18,10 @@ myModule.directive('mytab', function () {
             $scope.name = 'hello';
         }],
 
+        link: function(scope, element, attr){
+            element.delegate()
+        },
+
         templateUrl: 'tmp2.html'
     };
 });
