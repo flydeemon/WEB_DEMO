@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19ac9c3d-806a-4d71-898f-8a8948baeaa5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng-app/14ng指令例子/module.js" afterPath="$PROJECT_DIR$/ng-app/14ng指令例子/module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ng-app/14ng指令例子/ngdemo1.html" afterPath="$PROJECT_DIR$/ng-app/14ng指令例子/ngdemo1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web_demo.iml" afterPath="$PROJECT_DIR$/web_demo.iml" />
     </list>
     <ignored path="web_demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -284,7 +280,7 @@
       <option name="number" value="Default" />
       <updated>1464779922931</updated>
       <workItem from="1464779929483" duration="1065000" />
-      <workItem from="1464781031390" duration="6801000" />
+      <workItem from="1464781031390" duration="6883000" />
     </task>
     <task id="LOCAL-00001" summary="14指令例子">
       <created>1464781559101</created>
@@ -298,11 +294,17 @@
       <option name="project" value="LOCAL" />
       <updated>1464783228460</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="拖拽">
+      <created>1464788130954</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1464788130954</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7866000" />
+    <option name="totallyTimeSpent" value="7948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -348,7 +350,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="14指令例子" />
     <MESSAGE value="jq" />
-    <option name="LAST_COMMIT_MESSAGE" value="jq" />
+    <MESSAGE value="拖拽" />
+    <option name="LAST_COMMIT_MESSAGE" value="拖拽" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
