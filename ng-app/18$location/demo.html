@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>demo</title>
+		<style type="text/css">	
+			div{width: 100px;height: 500px;border: 1px solid black}
+			ul{position: fixed;right: 0;}
+		</style>
+		<script src="../angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="module.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-controller="myCtrl">
+		<ul><li ng-repeat="id in [1,2,3,4,5]" ng-click="change('div'+id)">{{id}}text</li></ul>
+		<div ng-repeat="id in [1,2,3,4,5]" ng-attr-id="div{{id}}">{{id}}</div>
+	</body>
+	
+</html>
