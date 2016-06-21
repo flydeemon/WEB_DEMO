@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>demo</title>
+		<style type="text/css">
+			.box{
+				width:200px;
+				height: 200px;
+				background: lightcoral;
+				transition: 1s all;
+			}
+			.box.ng-enter{opacity: 0;}
+			.box.ng-enter-active{opacity: 1;}
+			.box.ng-leave{opacity: 1;}
+			.box.ng-leave-active{opacity: 0;}
+		</style>
+		<script src="../angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.bootcss.com/angular.js/1.5.5/angular-animate.js"></script>
+		<script src="module.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-controller="myCtrl">
+		<input type="checkbox" ng-model="flag" />
+		<div class="box" ng-if="flag" ></div>
+	</body>
+	
+</html>

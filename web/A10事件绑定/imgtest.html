@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<input type="file" id='up' />
+		<input type=button value="测试" onClick="test('up');" />
+
+		<script type="text/javascript">
+			/*
+			 * 获取图片的大小
+			 */
+			function test(id) {
+
+				var img = document.getElementById(id);
+				alert(img.files[0].size / 1024);
+				
+			}
+		</script>
+	</body>
+
+</html>
