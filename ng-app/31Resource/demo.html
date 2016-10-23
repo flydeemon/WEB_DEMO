@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>demo</title>
+		<script src="../angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.bootcss.com/angular.js/1.5.5/angular-route.js"></script>
+		<script src="https://cdn.bootcss.com/angular.js/1.5.5/angular-resource.js"></script>
+		<script src="module.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-controller="myCtrl">
+		<input type="button" value="按钮1" ng-click="$location.path('aaa/zhangsan')" />
+		<input type="button" value="按钮2" ng-click="$location.path('bbb/zhangsan')" />
+		<div ng-view></div>
+	</body>
+
+</html>

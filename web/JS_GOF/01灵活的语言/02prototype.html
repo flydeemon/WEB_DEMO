@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>prototype</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 * 1.给每一个类添加一个全局的方法,这样会污染全局变量
+		 */
+		Function.prototype.addMethon = function(){
+			console.log('全局方法');
+		};
+		
+		var object_1 = new Function();
+//		object_1.addMethon();
+		var object_2 = function (){};
+//		object_2.addMethon();
+		
+		/**
+		 * 2.利用原型的方式模拟类的静态属性
+		 */
+		Function.prototype.addMethon = function(name, fun){
+			this.prototype[name] = fun;
+			return this;
+		};
+		
+		var Persion = new Function();
+		Persion.addMethon('getAge', function(){
+			console.log('年龄:15');
+			return this;
+		});
+		var techer = new Persion();
+		techer.getAge();
+	</script>
+</html>

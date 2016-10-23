@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div>
+	<input type="button" value="按钮1" id="btn1" /><br/>
+	<input type="button" value="按钮2" id="btn2" /><br/>
+</div>
+</body>
+	<script type="text/javascript" src="./eventUtil.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+
+			var btn1 = document.getElementById('btn1');
+			var btn2 = document.getElementById('btn2');
+			function add(e){
+				alert('btn1 ok!');
+				console.log(eventUtil.getEvent(e));
+				console.log(eventUtil.getType(e));
+				console.log(eventUtil.getTarget(e));
+			}
+			eventUtil.setBindEvent(btn1, 'click', add);
+
+			btn2.onclick = function(){
+				eventUtil.setRemoveEvent(btn1, 'click', add);
+			};
+		};
+	</script>
+</html>

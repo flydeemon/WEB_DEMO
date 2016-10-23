@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>面向对象</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 * 1.利用返回一个新对象来实现创建类
+		 */
+		var CheckObject = function() {
+			return {
+				checkName: function() {
+					console.log("验证用户名");
+				},
+				checkEmail: function() {
+					console.log("验证邮箱");
+				},
+				checkPassword: function() {
+					console.log("验证密码");
+				}
+			};
+		};
+		//var check = new CheckObject();
+		//check.checkName();
+
+		/*
+		 * 2.用构造器定义一个类,并且使用链式调用
+		 */
+		var CheckObject = function() {
+			this.checkName = function() {
+				console.log("验证用户名");
+				return this;
+			};
+			this.checkEmail = function() {
+				console.log("验证邮箱");
+				return this;
+			};
+			this.checkPassword = function() {
+				console.log("验证密码");
+				return this;
+			};
+		};
+		//var check = new CheckObject();
+		//check.checkEmail().checkPassword();
+
+		/*
+		 * 3.使用原型来优化性能
+		 */
+		var CheckObject = function() {
+			this.prototype.checkName = function() {
+				console.log("验证用户名");
+				return this;
+			};
+			this.prototype.checkEmail = function() {
+				console.log("验证邮箱");
+				return this;
+			};
+			this.prototype.checkPassword = function() {
+				console.log("验证密码");
+				return this;
+			};
+		};
+
+		/*
+		 * 原型的第二种赋值方法
+		 */
+		var CheckObject = function() {
+			this.prototype = {
+				checkName: function() {
+					console.log("验证用户名");
+					return this;
+				},
+				checkEmail: function() {
+					console.log("验证邮箱");
+					return this;
+				},
+				checkPassword: function() {
+					console.log("验证密码");
+					return this;
+				}
+			};
+		};
+	</script>
+</html>

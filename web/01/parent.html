@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.superBox{
+				height: 200px;
+				background: lightblue;
+				position: relative;
+			}
+			.subBox{
+				width: 200px;
+				height: 100px;
+				background: lightcoral;
+				/*float: right;*/
+				position: absolute;
+				text-align: center;
+				font-size: 16px;
+				top: 0; bottom: 0; right: 0; left: 0;
+				margin: auto;
+				line-height: 100px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div id="superBox" class="superBox">
+			<div id="subBox" class="subBox"><span>子盒子</span></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		(function (){
+			var superBox = document.getElementById('superBox');
+			console.log(superBox.offsetHeight);
+			var subBox = document.getElementById('subBox');
+			console.log(subBox.offsetHeight);
+		})();
+	</script>
+</html>

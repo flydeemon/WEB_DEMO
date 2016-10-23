@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**
+			 * 属性和方法包装
+			 * @param {Object} id
+			 * @param {Object} name
+			 */
+			var Book = function(id, name) {
+				//私有属性
+				var num = 0;
+				//私有方法
+				function check() {};
+				//特权方法
+				this.getNum = function() {};
+				this.settNum = function() {};
+				//对象公有属性
+				this.id = id;
+				this.name = name;
+				//构造器
+				//this.setName(name);
+
+			};
+			Book.prototype = {
+				//公有属性
+				isBook: false,
+				//公有方法
+				checkName: function() {
+					console.log("验证名字");
+					return this;
+				}
+			};
+			//类静态属性(对象不能访问)
+			Book.isChinese = false;
+			//类静态方法(对象不能访问)
+			Book.checkId = function() {};
+
+			var book = new Book();
+			//console.log(book.isChinese); // << undefined
+			//console.log(Book.isChinese); // << false
+
+			/**
+			 * 2.将类的静态变量通过闭包实现
+			 */
+			var Desk = (function() {
+				//静态私有属性(只能在类的内部访问)
+				var num = 0;
+				//静态私有方法(只能在类的内部访问)
+				function check() {};
+				return function(id, name) {
+					//特权方法
+					this.getNum = function() {};
+					this.settNum = function() {};
+					//对象公有属性
+					this.id = id;
+					this.name = name;
+					//构造器
+					//this.setName(name);
+				};
+			})();
+			Desk.prototype = {
+				//公有属性
+				isBook: false,
+				//公有方法
+				checkName: function() {
+					console.log("验证名字");
+					return this;
+				}
+			};
+
+			var desk = new Desk();
+			//console.log(desk.isBook);
+			//console.log(Desk.isBook); //Desk的原型链上找不到 undefined
+
+			/**
+			 * 3.把原型写在闭包内,形成一个整体
+			 */
+			var Persion = (function() {
+				//静态私有属性(只能在类的内部访问)
+				var num = 0;
+				//静态私有方法(只能在类的内部访问)
+				function check() {};
+				//声明类
+				function _persion(id, name) {
+					//特权方法
+					this.getNum = function() {};
+					this.settNum = function() {};
+					//对象公有属性
+					this.id = id;
+					this.name = name;
+					//构造器
+					//this.setName(name);
+				};
+				//构建原型
+				_persion.prototype = {
+					//公有属性
+					isBook: false,
+					//公有方法
+					checkName: function() {
+						console.log("验证名字");
+						return this;
+					}
+				};
+				//返回类
+				console.log('类中:'+_persion.isBook);
+				return _persion;
+			})();
+			var persion = new Persion();
+			console.log(persion.isBook);
+			console.log(Persion.isBook);
+		</script>
+	</body>
+</html>

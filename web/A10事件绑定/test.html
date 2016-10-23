@@ -5,24 +5,36 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<script>
-			function stringToHex(str) {　　　　
-				var val = "";　　　　
-				for (var i = 0; i < str.length; i++) {　　　　　　
-					if (val == "")
-						val = str.charCodeAt(i).toString(2);　　　　　　
-					else
-						val += "," + str.charCodeAt(i).toString(2);　　　　
-				}　　　　
-				return val;　　
-			}
-			var str = 1;　　
-			document.write(stringToHex(str));
+			window.onload = function(){
+				var EventFn = function(name, fn){
+					this.name = name;
+					this.fn = fn;
+					this.getName = function(){
+						console.log('name: ' + this.name);
+					};
+					this.runFn = function(){
+						this.fn();
+					}
+				};
+
+				var demo = new EventFn('obj', (function(){
+					var time = 0;
+					return function(){
+						time++;
+						console.log(time);
+					}
+				})());
+
+				demo.getName();
+				demo.runFn();
+				demo.runFn();
+				demo.runFn();
+			};
 		</script>
 	</head>
 
 	<body>
-		<button id="btn1">点我啊1</button>
-		<button id="btn2">点我啊2</button>
+
 	</body>
 
 </html>

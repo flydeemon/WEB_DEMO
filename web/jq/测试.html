@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>fade</title>
+		<style type="text/css">
+			div{width: 200px;height: 200px;}
+		</style>
+		
+		<script src="jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var count = 0;
+				(function (count){
+					count++;
+					console.log('自执行函数内部:'+count);
+				})(count);
+				
+				console.log('现在count:'+count);
+				
+				var b = function b(count){
+					return function(){
+						console.log('b:'+count);
+					}
+				};b(count)();
+				
+				/*var a = function a(count){
+					count++;
+					console.log('a1:'+count);
+				};a(count);*/
+				
+				console.log('现在b:'+count);
+				
+				Container.of = function(x){
+					return new Container(x);
+				}
+				
+			});
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

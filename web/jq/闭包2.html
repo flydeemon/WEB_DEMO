@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		闭包
+		<div id="email">email</div>
+		<div id="name">name</div>
+		<div id="age">age</div>
+		<div id="help">help</div>
+	</body>
+	<script type="text/javascript">
+		function showHelp(help) {
+			document.getElementById('help').innerHTML = help;
+		}
+
+		function makeHelpCallback(help) {
+			return function() {	
+				showHelp(help);debugger;
+			};	
+		}
+
+		function setupHelp() {
+			var helpText = [{
+				'id': 'email',
+				'help': 'Your e-mail address'
+			}, {
+				'id': 'name',
+				'help': 'Your full name'
+			}, {
+				'id': 'age',
+				'help': 'Your age (you must be over 16)'
+			}];
+
+			for(var i = 0; i < helpText.length; i++) {
+				var item = helpText[i];
+				document.getElementById(item.id).onclick = makeHelpCallback(item.help);
+				
+			}
+		}
+
+		setupHelp();
+	</script>
+</html>

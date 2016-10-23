@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title>创建对象的安全模式</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/**
+			 * 1.创建一个类
+			 */
+			var Book = function(title, time, type) {
+				this.title = title;
+				this.time = time;
+				this.type = type;
+			};
+			var book = new Book('java', 20161001, '工具书');
+			//可能会忘记写 new 关键字
+			//var book = Book('java', 20161001, '工具书'); << undefined
+
+			/**
+			 * 2.使用安全模式
+			 */
+			var Book = function(title, time, type) {
+				if(this instanceof Book) {
+					this.title = title;
+					this.time = time;
+					this.type = type;
+				} else {
+					return new Book(title, time, type);
+				}
+			};
+			var book = Book('PHP', 20161001, '工具书');
+			
+		</script>
+	</body>
+</html>

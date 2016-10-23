@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/**
+		 * 3.组合式继承
+		 * 结合类式继承和构造函数继承的优点,可以实现父类原型共享,子类信息独立
+		 * 缺点是使用了两次构造函数,性能下降
+		 */
+		//创建父类
+		function SuperBook() {
+			this.arr = ['Java', 'php', 'js'];
+		}
+		//定义父类原型
+		SuperBook.prototype.getArr = function() {
+			console.log('Book:' + this.arr);
+		};
+		//创建子类
+		function SubBook(time) {
+			this.time = time;
+			//SuperBook.call(this);
+		}
+		//把父类的实例赋值给子类的原型,实现类式继承
+		//SubBook.prototype = new SuperBook();
+		SubBook.prototype = SuperBook;
+		//定义子类原型
+		SubBook.prototype.getTime = function() {
+			console.log('SubBook' + this.time);
+		};
+
+		SuperBook.prototype.getName = function() {
+			console.log('name');
+		};
+		
+		//测试
+		var book1 = new SubBook('20161003');
+/*		book1.arr.push('node');
+		book1.getArr();
+		book1.getTime();
+		//book1.getName();
+
+		var book2 = new SubBook('20161001');
+		book2.getArr();
+		book2.getTime();*/
+		var a = new SubBook();
+		//alert(SubBook.getArr());
+	</script>
+</html>
