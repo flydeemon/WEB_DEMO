@@ -1,0 +1,357 @@
+h1,h2,p,a {
+    font-family: "苹方 常规", Arial, sans-serif;
+}
+
+ul {
+    margin : 0;
+}
+
+/*导航栏*/
+header {
+    background : rgba(0,0,0,0.4);
+}
+
+nav {
+    background : transparent;
+    height : 50px;
+}
+
+nav ul {
+    list-style-type : none;
+    margin : 0;
+    float : right;
+}
+
+nav ul .active {
+    border-bottom : 2px solid whitesmoke;
+}
+
+nav ul li a:hover{
+    border-bottom : 2px solid whitesmoke;
+}
+
+nav ul li,nav .logo {
+    display: inline-block;
+    line-height : 50px;
+    margin-right : 20px;
+}
+
+nav ul li a, nav a {
+    text-decoration : none;
+    line-height : inherit;
+    display: inline-block;
+    height : inherit;
+    color : #FFF;
+}
+
+#banner {
+
+    height : 800px;
+}
+
+#banner .inner {
+    max-width : 300px;
+    text-align : center;
+    margin: 0 auto;
+    position : relative;
+    top: 160px;
+}
+
+button:hover {
+    cursor : pointer;
+}
+
+.inner button {
+    border: none;
+    background: #FFFFFF;
+    color : #EEEEEE;
+    padding: 10px;
+}
+
+#banner button {
+    padding : 14px 28px;
+    font-size : 20px;
+    letter-spacing : 4px;
+    border-radius: 6px;
+    background: #18a;
+}
+
+#banner .inner .more {
+    margin-top : 280px;
+}
+
+.sub-heading {
+    font-size : 18px;
+    line-height :30px;
+    margin : 30px 0;
+    color : #fff;
+}
+
+/*第二部分*/
+.logo {
+    font-size : 20px;
+    font-weight:  700;
+    letter-spacing : 1px;
+    float : left;
+    padding :0 10px;
+}
+
+.logo:hover {
+    border-bottom : 2px solid whitesmoke;
+}
+
+h1 {
+    margin: 0;
+    padding : 20px;
+    color : #FFFFFF;
+    border-top : 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.hr {
+    width : 100%;
+    margin : 20px auto;
+    background : #FFF;
+    height : 2px;
+}
+
+.more a {
+    text-decoration: none;
+    color : #FFFFFF;
+}
+
+.green-section {
+    background : rgba(32, 112, 150, 0.8);
+    color : #FFFFFF;
+    text-align : center;
+}
+
+.green-section .hr{
+    background : #078494;
+    width : 60%;
+}
+
+.green-section .i-group {
+    margin-top : 60px;
+}
+
+.green-section .i-group .icon{
+    display : inline-block;
+    width : 80px;
+    height : 80px;
+    background : rgba(43, 131, 165, 0.43);
+    margin : 20px;
+    text-align : center;
+    -webkit-transform : rotate(45deg); -moz-transform : rotate(45deg); -ms-transform : rotate(45deg); -o-transform : rotate(45deg); transform : rotate(45deg);
+}
+
+.wrapper {
+    max-width : 1080px;
+    margin : 0 auto;
+    padding: 100px 0;
+}
+
+.gray-section {
+    background : #252F34;
+    color: #FFFFFF;
+}
+
+.article-preview:nth-child(odd){
+    background-color: rgba(255,255,255,0.05);
+}
+
+.article-preview > div{
+    font-size: 0;
+    float : left;
+}
+
+.article-preview:after {
+    content : '';
+    display : block;
+    clear : both;
+}
+
+.clearfix:after {
+    content : '';
+    display : block;
+    clear : both;
+}
+
+.gray-section .img-section {
+    width : 45%;
+}
+
+.img-section img {
+    width: 100%;
+}
+
+.img-section:nth-child(even) {
+    float : right;
+}
+
+.gray-section .text-section {
+    max-width : 45%;
+    position : relative;
+    /*top: 60px;*/
+    left : 50px;
+}
+
+
+.text-section > * {
+    max-width : 90%;
+}
+
+.text-section h2 {
+    font-size : 32px;
+    margin-bottom : 20px;
+}
+
+.text-section .sub-heading {
+    font-size : 22px;
+    margin-top: 0;
+}
+
+.text-section p {
+    font-size : 18px;
+    letter-spacing :1px;
+}
+
+/*第三部分*/
+.purple-section {
+    padding: 80px;
+    background : rgba(100, 84, 139, 0.9);
+    color : #FFFFFF;
+}
+
+.purple-section .heading-wrapper {
+    text-align : center;
+}
+
+.purple-section .hr {
+    background : #373259;
+    width : 60%;
+}
+
+.card {
+    float : left;
+    width : 50%;
+    min-height : 300px;
+    padding : 20px;
+    -webkit-box-sizing : border-box; -moz-box-sizing : border-box; box-sizing : border-box;
+    /*border : 1px solid white;*/
+}
+
+h3 {
+    font-size : 24px;
+}
+
+.card p {
+    font-size : 18px;
+    letter-spacing :1px;
+}
+
+.card:first-child {
+    background : rgba(0, 0, 0, 0.04);
+}
+
+.card:nth-child(2){
+    background : rgba(0, 0, 0, 0.08);
+}
+
+.card:nth-child(3){
+    background : rgba(0, 0, 0, 0.12);
+}
+
+.card:nth-child(4){
+    background : rgba(0, 0, 0, 0.16);
+}
+
+.card:nth-child(5){
+    background : rgba(0, 0, 0, 0.20);
+}
+
+.card:nth-child(6){
+    background : rgba(0, 0, 0, 0.24);
+}
+
+
+footer {
+    background : rgba(0, 0, 0, 0.24);
+    color : #fff;
+    min-height : 200px;
+    text-align : center;
+}
+
+ul.share-group {
+    display : block;
+    margin : 0 auto;
+    padding : 50px;
+}
+
+.share-group li {
+    display : inline-block;
+    padding : 10px;
+}
+
+.copy {
+    padding-bottom : 20px;
+}
+
+.main-wrapper {
+    position: relative;
+    background : #444 url("../img/banner.jpg");
+    background-attachment: fixed;
+    background-repeat : no-repeat;
+    -webkit-background-size : cover; background-size : cover;
+    background-position : center center;
+}
+
+/*遮罩层*/
+.mask {
+    position : fixed;
+    top : 0;
+    right : 0;
+    bottom : 0;
+    left : 0;
+    background : rgba(0,0,0,0.2);
+    display : none;
+}
+
+/*侧边栏*/
+#sidebar {
+    position: fixed;
+    top : 0;
+    right : -300px;
+    bottom : 0;
+    width : 300px;
+    background : rgba(51, 51, 51, 0.92);
+}
+
+
+#sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding : 0;
+}
+
+#sidebar a{
+    width : 100%;
+    display : inline-block;
+    padding : 10px 30px;
+    text-decoration : none;
+    color : #FFFFFF;
+}
+
+#sidebar a:hover {
+    background: #444;
+}
+
+.back-to-top {
+    position : fixed;
+    bottom : 30px;
+    right : 30px;
+    border : 1px solid #888;
+    padding : 10px;
+    color : #888;
+    background : rgba(0,0,0, 0);
+}
